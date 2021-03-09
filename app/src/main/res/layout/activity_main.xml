@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <ImageView
+        android:id="@+id/img_all"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary"
+        android:padding="8dp"
+        android:src="@drawable/ic_all"
+        app:layout_constraintEnd_toStartOf="@+id/img_happy"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/img_happy"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary"
+        android:padding="8dp"
+        android:src="@drawable/ic_happy"
+        app:layout_constraintEnd_toStartOf="@+id/img_sun"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_all"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/img_sun"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary"
+        android:padding="8dp"
+        android:src="@drawable/ic_sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_happy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Olá, Felipe"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_happy" />
+
+    <TextView
+        android:id="@+id/text_phrase"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Frase"
+        android:padding="16dp"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/view_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_name"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="128dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/button_new_phrase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_phrase" />
+
+    <Button
+        android:id="@+id/button_new_phrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ripple_button"
+        android:padding="16dp"
+        android:text="@string/new_phrase"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
